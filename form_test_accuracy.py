@@ -74,49 +74,49 @@ class TestSymp(unittest.TestCase):
     def test_singleton_output(self):
         for i in self.total_exprs:
             if not is_singleton_form(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_singleton_form(i)[1])
 
     def test_monomial_output(self):
         for i in self.total_exprs:
             if not is_monomial_form(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_monomial_form(i)[1])
 
     def test_fully_expanded_polynomial_output(self):
         for i in self.total_exprs:
             if not is_fully_expanded_polynomial(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_fully_expanded_polynomial(i)[1])
 
     def test_fully_factored_real_polynomial_output(self):
         for i in self.total_exprs:
             if not is_fully_factored_polynomial(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_fully_factored_polynomial(i)[1])
 
     def test_fully_factored_complex_polynomial_output(self):
         for i in self.total_exprs:
             if not is_fully_factored_polynomial(i,domain='CC')[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_fully_factored_polynomial(i,domain='CC')[1])
 
     def test_fully_factored_integer_polynomial_output(self):
         for i in self.total_exprs:
             if not is_fully_factored_polynomial(i,domain='ZZ')[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(is_fully_factored_polynomial(i,domain='ZZ')[1])
 
     def test_simplified_exp_bases_output(self):
         for i in self.total_exprs:
             if not simplified_exp_bases(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(simplified_exp_bases(i)[1])
 
     def test_minimised_exp_bases_output(self):
         for i in self.total_exprs:
             if not minimised_exp_bases(i)[1]:
-                print srepr(i)
+                print(srepr(i))
             self.assertIsNotNone(minimised_exp_bases(i)[1])
 
     def test_singleton(self):

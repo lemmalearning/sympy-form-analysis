@@ -1,5 +1,6 @@
 import sympy
 import itertools
+import six
 
 from sympy import Add,Mul,rcollect,Number,NumberSymbol,sin,cos,Pow,Integer,Symbol,fraction,gcd,div,Rational,exp,S,flatten,I
 from sympy.functions.elementary.trigonometric import TrigonometricFunction as SymTrigF
@@ -80,7 +81,7 @@ def is_numerical_equation(expr):
                 [0]: boolean containing the result
                 [1]: string describing the result
     '''
-    if isinstance(expr, (Number, NumberSymbol,int,long,float,complex)):
+    if isinstance(expr, (Number, NumberSymbol, float, complex) + six.integer_types):
         return True, "Expression is a basic Python number type"
     elif len(expr.free_symbols) == 0:
         return True, "Expression is a numerical expression"
